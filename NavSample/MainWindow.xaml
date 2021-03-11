@@ -21,9 +21,9 @@
     </Window.Resources>
     <DockPanel x:Name="mainGrid">
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-            <Button x:Name="GotoViewOne" Width="60" Content="Page One" Command="{Binding NativateToOneCmd}" Click="GotoButton_Click"></Button>
-            <Button x:Name="GotoViewTwo" Width="60" Content="Page Two" Command="{Binding NativateToTwoCmd}" Click="GotoButton_Click"></Button>
-            <Button x:Name="GotoViewThree" Width="60" Content="Page Two" Command="{Binding NativateToThreeCmd}" Click="GotoButton_Click"></Button>
+            <Button x:Name="GotoViewOne" Width="60" Content="Page One" Command="{Binding NavigateToOneCmd}" Click="GotoButton_Click"></Button>
+            <Button x:Name="GotoViewTwo" Width="60" Content="Page Two" Command="{Binding NavigateToTwoCmd}" Click="GotoButton_Click"></Button>
+            <Button x:Name="GotoViewThree" Width="60" Content="Page Three" Command="{Binding NavigateToThreeCmd}" Click="GotoButton_Click"></Button>
         </StackPanel>
         <ContentControl DockPanel.Dock="Top" Content="{Binding CurrentViewModel}">
             

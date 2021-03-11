@@ -25,6 +25,15 @@ namespace NavSample
             InitializeComponent();
             mainWindowViewModel = new ViewModel.MainWindowViewModel(new ViewModel.ViewOneViewModel());
             mainGrid.DataContext = mainWindowViewModel;
+            System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged += NetworkChange_NetworkAddressChanged;
+
+        }
+
+        private void NetworkChange_NetworkAddressChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("A pu internet !");
+
+            //https://docs.microsoft.com/en-us/dotnet/api/system.net.networkinformation.networkchange?view=net-5.0
         }
 
         ViewModel.MainWindowViewModel mainWindowViewModel;
