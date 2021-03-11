@@ -31,15 +31,19 @@ namespace NavSample
 
         private void GotoButton_Click(object sender, RoutedEventArgs e)
         {
-            string buttonName = ((Button)sender).Name;
-            if(buttonName == "GotoViewOne")
-            {
-                mainWindowViewModel.CurrentViewModel = new ViewModel.ViewOneViewModel();
-            }
-            if (buttonName == "GotoViewTwo")
-            {
-                mainWindowViewModel.CurrentViewModel = new ViewModel.ViewTwoViewModel();
-            }
+            //string buttonName = ((Button)sender).Name;
+            //if(buttonName == "GotoViewOne")
+            //{
+            //    mainWindowViewModel.CurrentViewModel = new ViewModel.ViewOneViewModel();
+            //}
+            //if (buttonName == "GotoViewTwo")
+            //{
+            //    mainWindowViewModel.CurrentViewModel = new ViewModel.ViewTwoViewModel();
+            //}
+            //if (buttonName == "GotoViewThree")
+            //{
+            //    mainWindowViewModel.CurrentViewModel = new ViewModel.ViewThreeViewModel();
+            //}
         }
     }
 }
