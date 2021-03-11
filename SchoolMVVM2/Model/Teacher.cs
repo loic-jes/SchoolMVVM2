@@ -24,5 +24,11 @@ namespace SchoolMVVM2.Model
             }*/
         }
 
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}";
+        }
+
+
     }
 }

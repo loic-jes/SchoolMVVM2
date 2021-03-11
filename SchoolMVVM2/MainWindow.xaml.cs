@@ -23,6 +23,8 @@ namespace SchoolMVVM2
         public MainWindow()
         {
             InitializeComponent();
+            mainWindowViewModel = new ViewModel.MainWindowViewModel();
+            this.DataContext = mainWindowViewModel;
 
             //var x = Repository.BaseRepository.Connect();
             //var y = Repository.SectionRepository.GetOne(1);
@@ -39,11 +41,25 @@ namespace SchoolMVVM2
 
             //var e = Repository.TeacherRepository.GetOne(1);
 
-            var f = Repository.LinkRepository.GetTeacherWithSubjectBySection(1);
+            //var f = Repository.LinkRepository.GetTeacherWithSubjectBySection(1);
 
 
             //var f = Repository.SectionRepository.ShowMeOne(1);
 
+        }
+
+        private ViewModel.MainWindowViewModel mainWindowViewModel;
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListView listView = (ListView)sender;
+            View.StudentView studentWindow = (View.StudentView)StudentViewControl.Content;
+            studentWindow.studentViewModel.SetStudentList((Model.Section)listView.SelectedItem);
+
+
+            View.TeacherView teacherWindow = (View.TeacherView)TeacherViewControl.Content;
+            teacherWindow.teacherViewModel.SetTeacherList((Model.Section)listView.SelectedItem);
+            //ViewModel.StudentViewModel.SetStudentList((Model.Section)listView.SelectedItem);
         }
     }
 }

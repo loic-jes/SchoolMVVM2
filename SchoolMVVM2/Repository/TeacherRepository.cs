@@ -39,6 +39,8 @@ namespace SchoolMVVM2.Repository
         }
 
 
+
+
         public static List<Model.Subject> GetTeacherSubjectList(int idTeacher)
         {
             List<Model.Subject> subjectList = new List<Model.Subject>();
@@ -88,6 +90,9 @@ namespace SchoolMVVM2.Repository
 
 
         }
+
+        // Select subjects and teachers by section
+        //SELECT subject.*, teacher.* FROM subject, section_subject, teacher, link WHERE subject.id= section_subject.id_subject AND link.id_section = section_subject.id_section AND link.id_teacher= teacher.id AND link.id_subject = section_subject.id_subject AND section_subject.id_section= 1
 
     }
 }

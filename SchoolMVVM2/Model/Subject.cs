@@ -30,5 +30,12 @@ namespace SchoolMVVM2.Model
                 return Repository.TeacherRepository.GetSubjectTeacherList(Id);
             }
         }
+
+        public override string ToString()
+        {
+            return $"{Name }";
+        }
+
+
     }
 }

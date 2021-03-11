@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="SchoolMVVM2.View.StudentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SchoolMVVM2.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ListView ItemsSource="{Binding StudentList}" SelectedValue="{Binding CurrentStudent}" SelectionChanged="ListViewStudent_SelectionChanged">
+            <ListView.View>
+                <GridView  ColumnHeaderToolTip="Student info" >
+                    <GridViewColumn Header="FirstName" DisplayMemberBinding="{Binding Path=FirstName}"/>
+                    <GridViewColumn Header="LastName" DisplayMemberBinding="{Binding Path=LastName}"/>
+                    <GridViewColumn Header="ID Section" DisplayMemberBinding="{Binding Path=Id_section}"/>
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+
+
+    </Grid>
+</UserControl>

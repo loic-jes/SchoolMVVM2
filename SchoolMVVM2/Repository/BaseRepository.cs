@@ -130,9 +130,9 @@ namespace SchoolMVVM2.Repository
 
             }
 
-            foreach (var item in dataRow.Table.Columns)
+            foreach (DataColumn item in dataRow.Table.Columns)
             {
-                var z = item;
+                var z = item.ColumnName;
                
             }
 

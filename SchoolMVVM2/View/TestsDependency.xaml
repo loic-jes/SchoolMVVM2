@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="SchoolMVVM2.View.TestsDependency"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SchoolMVVM2.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid x:Name="mainGridTest">
+        <TextBlock x:Name="textBoxSectionFullName" DockPanel.Dock="Top" ></TextBlock>
+        <ListView  ItemsSource="{Binding StudentList}">
+            <ListView.View>
+                <GridView ColumnHeaderToolTip="Tests">
+                    <GridView.ColumnHeaderContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Ascending" Click="Ascending_Click"/>
+                            <MenuItem Header="Descending" Click="Descending_Click"/>
+                        </ContextMenu>
+                    </GridView.ColumnHeaderContextMenu>
+                    <GridViewColumn Header="Fait avec Dependency Property" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

@@ -12,6 +12,12 @@ namespace SchoolMVVM2.Model
         public string Name { get; set; }
         public SectionLevel Level { get; set; }
 
+
+        public override string ToString()
+        {
+            return (int)(Level)+ "ème " + Name;
+        }
+
         public List<Student> studentList
         {
             get

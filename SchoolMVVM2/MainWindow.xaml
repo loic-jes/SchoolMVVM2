@@ -4,9 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SchoolMVVM2"
+        xmlns:view="clr-namespace:SchoolMVVM2.View"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <DockPanel>
+            <ListView DockPanel.Dock="Left" ItemsSource="{Binding SectionList}" SelectedValue="{Binding CurrentSection}" SelectionChanged="ListView_SelectionChanged">
+                
+            </ListView>
+            <ContentControl x:Name="StudentViewControl">
+            <view:StudentView />
+            </ContentControl>            
+            <ContentControl x:Name="TeacherViewControl">
+                <view:TeacherView />
+            </ContentControl>
+            <ContentControl x:Name="TestViewControl">
+                <view:TestsDependency SetText="{Binding CurrentSection}" />
+            </ContentControl>
+            <!--<ContentControl x:Name="NoteViewControl">
+                <view:NoteView SetText="{Binding CurrentStudent}" />
+            </ContentControl>-->
+        </DockPanel>
     </Grid>
 </Window>

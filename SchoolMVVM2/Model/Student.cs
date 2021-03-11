@@ -15,5 +15,10 @@ namespace SchoolMVVM2.Model
             get { return Repository.SectionRepository.GetOne(Id_section); }
             set { Id_section = value.Id; } 
         }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName} - Section {Id_section}";
+        }
     }
 }
